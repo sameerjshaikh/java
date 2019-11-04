@@ -28,13 +28,13 @@ class Calc
       		break;
 
       	case 2 : int subnum=Operation.sub();
-      			System.out.println("Addation is "+subnum);
+      			System.out.println("Sub is "+subnum);
       		break;
       	case 3 : int mulnum=Operation.mul();
-      			System.out.println("Addation is "+mulnum);
+      			System.out.println("Mul is "+mulnum);
       		break;
       	case 4 : int divnum=Operation.div();
-      			System.out.println("Addation is "+divnum);
+      			System.out.println("Div is "+divnum);
       		break;			
 
       }
