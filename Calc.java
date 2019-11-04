@@ -19,22 +19,26 @@ class Calc
   
        a = Integer.parseInt(System.console().readLine());
 
+       int value1=Operation.get();
+       int value2=Operation.get();
+
+
       
       switch(a)
 
       {
-      	case 1 : int addnum=Operation.add();
-      			System.out.println("Addation is "+addnum);
+      	case 1 : 
+      			System.out.println("Addation is "+Operation.add(value1,value2));
       		break;
 
-      	case 2 : int subnum=Operation.sub();
-      			System.out.println("Sub is "+subnum);
+      	case 2 :
+      			System.out.println("Sub is "+Operation.sub(value1,value2));
       		break;
-      	case 3 : int mulnum=Operation.mul();
-      			System.out.println("Mul is "+mulnum);
+      	case 3 :
+      			System.out.println("Mul is "+Operation.mul(value1,value2));
       		break;
-      	case 4 : int divnum=Operation.div();
-      			System.out.println("Div is "+divnum);
+      	case 4 : 
+      			System.out.println("Div is "+Operation.div(value1,value2));
       		break;			
 
       }
@@ -56,36 +60,22 @@ class Operation
      	return value;
      }
 
-	public static int add()
+	public static int add(int value1, int value2)
 	{
-		int value1 = get();
-		int value2 = get();
-
-		int res =value1 + value2;
-		return res;
-
+		return value1 + value2;
 	} 
-	public static int sub()
+	public static int sub(int value1, int value2)
 	{
-		int value1 = get();
-		int value2 = get();
-
 		return value1 - value2;
 	} 
-	public static int div()
+	public static int div(int value1, int value2)
 	{
-		int value1 = get();
-		int value2 = get();
 
 		return value1 / value2;
 	} 
-	public static int mul()
+	public static int mul(int value1, int value2)
 	{
-		int value1 = get();
-		int value2 = get();
-
 		return value1 * value2;
-		
 	} 
 
 }
