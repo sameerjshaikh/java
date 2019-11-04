@@ -19,8 +19,8 @@ class Calc
   
        a = Integer.parseInt(System.console().readLine());
 
-       int value1=Operation.get();
-       int value2=Operation.get();
+       int value1=Integer.parseInt(Prompt.getString("Enter the First Value"));
+       int value2=Integer.parseInt(Prompt.getString("Enter the Second Value"));
 
 
       
@@ -52,14 +52,6 @@ class Calc
 class Operation
 {
 
-     public static int get()
-     {
-     	System.out.println("Enter the Value");
-     	int value=Integer.parseInt(System.console().readLine());
-
-     	return value;
-     }
-
 	public static int add(int value1, int value2)
 	{
 		return value1 + value2;
@@ -78,4 +70,11 @@ class Operation
 		return value1 * value2;
 	} 
 
+}
+class Prompt{
+	private static Console con = System.console();
+	static String getString(String question){
+		con.printf(question);
+		return con.readLine();
+	}
 }
